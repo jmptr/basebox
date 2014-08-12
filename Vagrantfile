@@ -20,7 +20,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.define "devops" do |box|
-    box.vm.box = "provisions/boxes/basebox.box"
+    box.vm.box = "puppetlabs/centos-6.5-64-puppet"
 
     box.vm.provider :virtualbox do |vb|
       vb.memory = 512
@@ -38,7 +38,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.define "wem" do |box|
-    box.vm.box = "provisions/boxes/basebox.box"
+    box.vm.box = "puppetlabs/centos-6.5-64-puppet"
 
     box.vm.provider :virtualbox do |vb|
       vb.memory = 1024
