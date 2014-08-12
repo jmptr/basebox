@@ -1,0 +1,6 @@
+disable-firewall
+install-git
+install-mongodb
+install-nodejs
+configure-mongodb
+### LAST LINE ###

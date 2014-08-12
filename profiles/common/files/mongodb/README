@@ -1,0 +1,6 @@
+mongodb.repo is copied to the guest so yum can install mongodb via the package
+manager.
+
+All other .js files are run against mongodb in no particular order, per
+/provisions/shell/configure-mongodb.sh
+

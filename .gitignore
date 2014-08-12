@@ -1,0 +1,13 @@
+.vagrant
+logs
+license.properties
+boxes/*.*
+*.box
+*.rpm
+*.bin
+*.hpi
+*.jar
+*.tar
+*.tar.gz
+*.tar.bz2
+profiles/common/files/phantomjs

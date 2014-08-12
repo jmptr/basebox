@@ -1,0 +1,20 @@
+This folder is intended to contain the jenkins jobs you want installed on the 
+instance.
+
+For every .xml file in this folder, install-jenkins-jobs.sh will attempt to 
+use that .xml to create a Jenkins job.
+
+In order to add a job to this folder, navigate to the config.xml for your job
+(commonly in /var/lib/jenkins/jobs/JOB_NAME/config.xml) and use the XML from 
+that file to create a new .xml here called JOB_NAME.xml, where JOB_NAME is the 
+name that job should have.
+
+Job names should not have spaces, because that's bad for everyone (such as API 
+consumers).  In order to simulate spaces in a job name, use a dash.
+
+Why a dash instead of an underscore?  Because sometimes a text cursor looks like 
+an underscore, which can make it difficult to visually determine whether the 
+job name follows the "no spaces" convention correctly.
+
+A sample job called 'whoami' is included.  The results of this job should 
+provide version numbers for some installed software.
