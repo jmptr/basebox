@@ -1,2 +1,8 @@
+disable-firewall
+install-git
+install-java
+install-jenkins
+install-mongodb
+install-nodejs
 configure-mongodb
-# LAST LINE
+### LAST LINE ###
