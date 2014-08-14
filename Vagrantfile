@@ -34,7 +34,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     box.vm.provision :shell, :path => "provision.sh", :args => "devops"
 
-
   end
 
   config.vm.define "wem" do |box|
@@ -47,10 +46,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     box.vm.network "forwarded_port", guest: 8080, host: 8090
     box.vm.network "forwarded_port", guest: 4502, host: 4502
-    box.vm.provision :shell, :path => "boxes/wem/shell/install-cq.sh"
-    box.vm.provision :shell, :path => "boxes/wem/shell/start-cq.sh"
 
-    box.vm.synced_folder "../cisco/wem", "/project"
+    box.vm.provision :shell, :path => "provision.sh", :args => "wem"
+
+    box.vm.synced_folder "../cisco/wem", "/code"
   end
 
 #  In some cases, you may need to reload the vbox tools on your VM,
