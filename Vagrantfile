@@ -15,6 +15,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     box.vm.network "forwarded_port", guest: 3000, host: 3000
     box.vm.synced_folder "../scrumscope", "/code"
+    box.vm.synced_folder "../scrumscope-populator", "/populator"
 
     box.vm.provision :shell, :path => "provision.sh", :args => "scrumscope"
   end
