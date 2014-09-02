@@ -15,9 +15,22 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     box.vm.network "forwarded_port", guest: 3000, host: 3000
     box.vm.synced_folder "../scrumscope", "/code"
-    box.vm.synced_folder "../scrumscope-populator", "/populator"
 
     box.vm.provision :shell, :path => "provision.sh", :args => "scrumscope"
+  end
+
+  config.vm.define "mise-en-place" do |box|
+    box.vm.box = "puppetlabs/centos-6.5-64-puppet"
+
+    box.vm.provider :virtualbox do |vb|
+      vb.memory = 512
+      vb.name = "mise-en-place"
+    end
+
+    box.vm.network "forwarded_port", guest: 3000, host: 3000
+    box.vm.synced_folder "../mise-en-place", "/code"
+
+    box.vm.provision :shell, :path => "provision.sh", :args => "mise-en-place"
   end
 
   config.vm.define "devops" do |box|

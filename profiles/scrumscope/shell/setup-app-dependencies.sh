@@ -1,1 +1,1 @@
-npm install -g grunt grunt-cli bower
+npm install -g grunt grunt-cli forever
