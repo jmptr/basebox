@@ -5,18 +5,18 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
-  config.vm.define "scrumscope" do |box|
+  config.vm.define "argus" do |box|
     box.vm.box = "puppetlabs/centos-6.5-64-puppet"
 
     box.vm.provider :virtualbox do |vb|
       vb.memory = 512
-      vb.name = "scrumscope"
+      vb.name = "argus"
     end
 
     box.vm.network "forwarded_port", guest: 3000, host: 3000
-    box.vm.synced_folder "../scrumscope", "/code"
+    box.vm.synced_folder "../argus", "/code"
 
-    box.vm.provision :shell, :path => "provision.sh", :args => "scrumscope"
+    box.vm.provision :shell, :path => "provision.sh", :args => "argus"
   end
 
   config.vm.define "mise-en-place" do |box|
