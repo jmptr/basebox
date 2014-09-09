@@ -28,9 +28,10 @@ or via the git terminal using the URL provided somewhere else on this page.
 
 ## Start Vagrant
 
-From the cloned directory, use `vagrant up` to load and provision this basbox.
+From the cloned basebox directory, use `vagrant up *profilename*` to load and 
+provision a VM for a profile.
 
-## About basebox-jm
+## About basebox
 
 This is a provisioning convention I'm trying to develop.  I'm trying to start
 with an environment that everyone feels comfortable with (centos), and adding
