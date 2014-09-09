@@ -1,6 +1,6 @@
 # basebox
 
-This is all the scripts I use to provision my basebox.
+This is a project I use to configure environments for my projects.
 
 ## Setup
 
@@ -9,17 +9,13 @@ This is all the scripts I use to provision my basebox.
 [VirtualBox](https://www.virtualbox.org) is a free VM player given to use by 
 Oracle.  [Download Virtual](https://www.virtualbox.org/wiki/Downloads).
 
-Direct link download:
-[Windows (exe)](http://download.virtualbox.org/virtualbox/4.3.14/VirtualBox-4.3.14-95030-Win.exe)
-[OSX (dmg)](http://download.virtualbox.org/virtualbox/4.3.14/VirtualBox-4.3.14-95030-OSX.dmg)
-
 Install VirtualBox to your development machine.
 
 ### Step 2 Install Vagrant
 
 [Vagrant](http://www.vagrantup.com/) is a free provider of virtual machines. 
 Using their plugin allows you to quickly download and provision a development 
-environment in less time than it takes to reall all this README docment.
+environment in less time than it takes to read all this README document.
 
 ## Clone me!
 
