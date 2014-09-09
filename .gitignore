@@ -1,5 +1,5 @@
 .vagrant
-logs
+logs/*.log
 license.properties
 boxes/*.*
 *.box

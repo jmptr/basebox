@@ -18,5 +18,3 @@ while [ 1 ]; do
 done
 
 echo "Restarting CQ Author instance complete"
-
-# sshfs JM@192.168.1.22:/Users/JM/Documents/code/basebox-jm /basebox

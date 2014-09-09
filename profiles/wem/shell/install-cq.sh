@@ -1,6 +1,5 @@
 
-host_files=/boxes/common/files
-
+host_files=/vagrant/profiles/wem/files
 guest_dir=/var/www/cq/Author
 
 jar_url=https://s3-us-west-2.amazonaws.com/jmptr-public
