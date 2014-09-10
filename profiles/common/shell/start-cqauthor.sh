@@ -1,19 +1,16 @@
 
-
 host_dir=/var/www/cq/Author/crx-quickstart/bin
 
 echo "Restarting CQ Author instance"
-echo "Please be patient, waiting for 202 response from CQ Author"
-$host_dir/stop
-sleep 3
 
+echo "Please be patient, waiting for 200 response from CQ Author at :4502"
 $host_dir/start
 sleep 10
 
 resp=$(curl -sL -u admin:admin -w %{http_code} http://localhost:4502 -o /dev/null)
 while [ 1 ]; do
   [ $resp = "200" ] && break
-  sleep 3
+  sleep 10
   resp=$(curl -sL -u admin:admin -w %{http_code} http://localhost:4502 -o /dev/null)
 done
 
