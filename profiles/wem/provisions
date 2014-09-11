@@ -2,5 +2,6 @@ disable-firewall
 install-git
 install-java
 install-jenkins
+install-maven
 install-cqauthor
 ### LAST LINE ###
