@@ -54,28 +54,16 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     box.vm.box = "puppetlabs/centos-6.5-64-puppet"
 
     box.vm.provider :virtualbox do |vb|
-      vb.memory = 1024
+      vb.memory = 1024 * 4
       vb.name = "wem"
     end
 
     box.vm.network "forwarded_port", guest: 8080, host: 8090
+    box.vm.network "forwarded_port", guest: 4502, host: 4502
 
     box.vm.provision :shell, :path => "provision.sh", :args => "wem"
 
     box.vm.synced_folder "../cisco/wem", "/code"
-  end
-
-  config.vm.define "cq" do |box|
-    box.vm.box = "puppetlabs/centos-6.5-64-puppet"
-
-    box.vm.provider :virtualbox do |vb|
-      vb.memory = 1024
-      vb.name = "cq"
-    end
-
-    box.vm.network "forwarded_port", guest: 4502, host: 4502
-
-    box.vm.provision :shell, :path => "provision.sh", :args => "cq"
   end
 
 #  In some cases, you may need to reload the vbox tools on your VM,

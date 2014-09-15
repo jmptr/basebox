@@ -16,7 +16,7 @@ for i in "${plugin_list[@]}"
 do
   if [ ! -f $host_plugins_dir/$i.hpi ]; then
     echo "Caching plugin $i"
-    wget --no-check-certificate $plugins_url/$i.hpi -O $host_plugins_dir/$i.hpi > /dev/null 2> /dev/null
+    wget -O $host_plugins_dir/$i.hpi $plugins_url/$i.hpi --no-check-certificate
   fi
 done
 

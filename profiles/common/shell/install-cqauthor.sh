@@ -16,7 +16,7 @@ fi
 
 if [ ! -f $host_dir/$jar_name ]; then
   echo "Caching provision file: $jar_name"
-  wget -O $host_dir/$jar_name $jar_url/$jar_name > $PRV_LOG_OUT 2> $PRV_LOG_ERR
+  wget -O $host_dir/$jar_name $jar_url/$jar_name --no-check-certificate
   echo "Cached provision file: $jar_name"
 fi
 
@@ -26,4 +26,4 @@ cp $host_dir/$jar_name $guest_dir/$jar_name
 cp $host_dir/license.properties $guest_dir/license.properties
 
 cd $guest_dir
-java -jar $jar_name -unpack > $PRV_LOG_OUT 2> $PRV_LOG_ERR
+java -jar $jar_name -unpack

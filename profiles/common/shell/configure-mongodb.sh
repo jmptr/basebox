@@ -7,6 +7,6 @@ fi
 for i in $PRV_HOST/files/mongodb/*.js
 do
   echo "Executing mongodb configuration: $i"
-  mongo $i > $PRV_LOG_OUT 2> $PRV_LOG_ERR
+  mongo $i
 done
 
