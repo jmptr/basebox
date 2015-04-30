@@ -1,6 +1,0 @@
-disable-firewall
-install-java
-install-maven
-install-cqauthor
-start-cqauthor
-### LAST LINE ###

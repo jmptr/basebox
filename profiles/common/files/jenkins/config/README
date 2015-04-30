@@ -1,6 +1,0 @@
-Any file in this folder is copied to the guest jenkins instance root folder
-/var/lib/jenkins
-
-This is an ideal folder to place plugin-specific or instance-specific 
-configuration files for Jenkins.
-

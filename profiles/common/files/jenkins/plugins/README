@@ -1,8 +1,0 @@
-provisions/files/jenkins/plugins is intended to be a caching folder.
-
-Since some jenkins plugins can be quite large, the provision script: 
-install-jenkins-plugins.sh contains a list of all the desired plugins, 
-and will download those plugins to this folder during provisioning so they 
-can be installed faster during subsequent provisions.
-
-In order to keep git tidy, additions to this folder are ignored.
