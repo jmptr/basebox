@@ -33,6 +33,20 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     box.vm.provision :shell, :path => "provision.sh", :args => "mise-en-place"
   end
 
+  config.vm.define "zampletrader" do |box|
+    box.vm.box = "puppetlabs/centos-7.0-64-puppet"
+
+    box.vm.provider :virtualbox do |vb|
+      vb.memory = 512 * 2
+      vb.name = "zampletrader"
+    end
+
+    box.vm.network "forwarded_port", guest: 3000, host: 3000
+    box.vm.synced_folder "../zampletrader", "/code"
+
+    box.vm.provision :shell, :path => "provision.sh", :args => "zampletrader"
+  end
+
 #  In some cases, you may need to reload the vbox tools on your VM,
 #  below is the provision to reset those services.
 
